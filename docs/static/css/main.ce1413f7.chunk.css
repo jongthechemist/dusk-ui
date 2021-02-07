@@ -3,6 +3,7 @@
   --primary_accent: #6405ff;
   --secondary_accent: #eb736c;
   --primary_gradient: linear-gradient(to right, #6405ff, #eb736c);
+  --vertical_gradient: linear-gradient(to top, #6405ff, #ff9c40);
   --primary_text: #ffffff;
   --primary_color: #ffffff;
   --secondary_text: #b1b3be;
@@ -13,7 +14,7 @@
   --primary_border: #6405ff;
   --secondary_border: #54586c;
   --contrast_background: white;
-  --contrast-text: #1a1d27;
+  --contrast_text: #1a1d27;
   /* --PRIMARY_BACKGROUND: "#1a1d27";
   --SECONDARY_BACKGROUND: "#222633";
   --TERTIARY_BACKGROUND: "#212939";
@@ -23,6 +24,40 @@
   --SECONDARY_COLOR: "#b1b3be";
   --TERTIARY_COLOR: "#54586c"; */
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Overpass Semibold", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  -webkit-margin-before: 0.5em;
+          margin-block-start: 0.5em;
+  -webkit-margin-after: 0.5em;
+          margin-block-end: 0.5em;
+}
+
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 3.75rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 2rem;
+}
+h5 {
+  font-size: 1.75rem;
+}
+h6 {
+  font-size: 1.5rem;
+}
+
 body {
   margin: 0;
   font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -44,7 +79,7 @@ pre {
   border-width: 1px;
   border-style: solid;
   border-radius: 2px;
-  color: var(--primary_text);
+  color: var(--secondary_text);
   white-space: pre-wrap;
   padding: 0 2px;
   overflow: hidden;
@@ -56,4 +91,4 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/*# sourceMappingURL=main.ac84c87a.chunk.css.map*/
+/*# sourceMappingURL=main.ce1413f7.chunk.css.map*/
