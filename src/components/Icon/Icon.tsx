@@ -1,44 +1,34 @@
-import React from "react";
 import styled from "styled-components";
 
-export type ButtonProps = React.ComponentProps<"button"> & {
+export type IconProps = React.ComponentProps<"span"> & {
   /**
    * Type of button
    */
-  btnType?: "primary" | "secondary" | "outline" | "plain";
+  type?: "primary" | "secondary" | "outline" | "plain";
   /**
    * How large should the button be?
    */
   size?: "small" | "medium" | "large";
 };
 
-/**
- * Primary UI component for user interaction
- */
-export const Button: React.FC<ButtonProps> = styled.button.attrs((props) => ({
-  className: `dusk-ui-btn ${props.className || ""}`,
-}))<ButtonProps>`
-  font-family: "Overpass", sans-serif;
-  border-radius: 4px;
-  border-width: 0px;
-  border-style: inset;
+export const Icon: React.FC<IconProps> = styled.span.attrs((props) => ({
+  className: `dusk-ui-icon ${props.className || ""}`,
+}))<IconProps>`
   display: flex;
+  justify-content: center;
   align-items: center;
-  cursor: pointer;
-  > * {
-    display: block;
-  }
+  border-radius: 50%;
   ${(props) => {
-    switch (props.btnType) {
+    switch (props.type) {
       case "primary":
         return `
-          background-image: var(--primary_gradient);
+          background-image: var(--vertical_gradient);
           color: var(--primary_text);
           transition: background-position ease-in-out 200ms;
-          box-shadow: 10px 10px 15px -3px rgba(235, 115, 108, 0.1), -10px 10px 15px -3px rgba(100, 5, 255, 0.1), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: -10px 10px 15px -3px rgba(100, 5, 255, 0.1), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
           transition: box-shadow ease-in-out 200ms;
           &:hover {
-            box-shadow: 10px 15px 25px -3px rgba(235, 115, 108, 0.1), -10px 15px 25px -3px rgba(100, 5, 255, 0.1), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: -10px 15px 25px -3px rgba(100, 5, 255, 0.1), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
           }
         `;
       case "secondary":
@@ -81,49 +71,36 @@ export const Button: React.FC<ButtonProps> = styled.button.attrs((props) => ({
     switch (props.size) {
       case "small":
         return `
-          font-size: 0.8rem;
-          padding: 0.8rem 1rem;
-          ${ButtonIcon} {
-            height: 1.5rem;
-            font-size: 1.2rem;
-            margin: -0.75rem 0;
-            padding-right: 0.3rem;
+          width: 3rem;
+          height: 3rem;
+          font-size: 1rem;
+          > * {
+            margin-top: -0.2rem;
           }
         `;
       case "medium":
         return `
-          font-size: 1rem;
-          padding: 1.2rem 1.8rem;
-          ${ButtonIcon} {
-            height: 1.8rem;
-            font-size: 1.5rem;
-            margin: -0.75rem 0;
-            padding-right: 0.5rem;
+          width: 8rem;
+          height: 8rem;
+          font-size: 2.5rem;
+          > * {
+            margin-top: -0.2rem;
           }
         `;
       case "large":
         return `
-          font-size: 1.5rem;
-          padding: 1.8rem 2.5rem;
-          ${ButtonIcon} {
-            height: 2.5rem;
-            font-size: 2.2rem;
-            margin: -1.25rem 0;
-            padding-right: 1rem;
+          width: 10rem;
+          height: 10rem;
+          font-size: 4rem;
+          > * {
+            margin-top: -0.4rem;
           }
         `;
     }
   }}
 `;
 
-Button.defaultProps = {
-  btnType: "plain",
+Icon.defaultProps = {
+  type: "plain",
   size: "medium",
 };
-
-export type ButtonIconProps = React.ComponentProps<"span">;
-export const ButtonIcon: React.FC<ButtonIconProps> = styled.span.attrs(
-  (props) => ({
-    className: `dusk-ui-btn-icon ${props.className || ""}`,
-  })
-)``;

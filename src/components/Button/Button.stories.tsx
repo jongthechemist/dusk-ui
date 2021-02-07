@@ -20,12 +20,13 @@ Primary.args = {
 
 export const WithIcon = Template.bind({});
 WithIcon.args = {
-  size: "small",
   btnType: "primary",
-  children: [
-    <ButtonIcon>
-      <MdPlayArrow />
-    </ButtonIcon>,
-    "Play",
-  ],
+  children: (
+    <>
+      <ButtonIcon>
+        <MdPlayArrow />
+      </ButtonIcon>
+      Play
+    </>
+  ),
 };

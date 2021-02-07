@@ -2,6 +2,7 @@
   --primary_accent: #6405ff;
   --secondary_accent: #eb736c;
   --primary_gradient: linear-gradient(to right, #6405ff, #eb736c);
+  --vertical_gradient: linear-gradient(to top, #6405ff, #ff9c40);
   --primary_text: #ffffff;
   --primary_color: #ffffff;
   --secondary_text: #b1b3be;
@@ -12,7 +13,7 @@
   --primary_border: #6405ff;
   --secondary_border: #54586c;
   --contrast_background: white;
-  --contrast-text: #1a1d27;
+  --contrast_text: #1a1d27;
   /* --PRIMARY_BACKGROUND: "#1a1d27";
   --SECONDARY_BACKGROUND: "#222633";
   --TERTIARY_BACKGROUND: "#212939";
