@@ -59,7 +59,8 @@ export const Button: React.FC<ButtonProps> = styled.button.attrs((props) => ({
           transition: background-color ease-in-out 200ms;
           &:hover {
             background-color: var(--primary_accent);
-            box-shadow: 0 15px 25px -3px rgba(100, 5, 255, 0.1), inset 0px 0px 0px 2px var(--primary_border);
+            background-image: var(--primary_gradient);
+            box-shadow: 0 15px 25px -3px rgba(100, 5, 255, 0.1), inset 0px 0px 0px 0px var(--primary_border);
           }
         `;
       case "plain":
