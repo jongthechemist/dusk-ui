@@ -1,11 +1,11 @@
+import React from "react";
 import styled from "styled-components";
 
-export type LinkProps = React.ComponentPropsWithoutRef<"a"> & {
+export type LinkProps = React.ComponentPropsWithRef<"a"> & {
   type: "primary" | "secondary";
-  children: React.ReactNode;
 };
 
-export const Link = styled.a.attrs((props: LinkProps) => ({
+export const Link: React.FC<LinkProps> = styled.a.attrs((props: LinkProps) => ({
   className: `dusk-ui-link dusk-ui-link-${props.type} ${props.className || ""}`,
   children: <span>{props.children}</span>,
 }))<LinkProps>`
