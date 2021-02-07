@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap);
+:root {
+  --primary_accent: #6405ff;
+  --secondary_accent: #eb736c;
+  --primary_gradient: linear-gradient(to right, #6405ff, #eb736c);
+  --primary_text: #ffffff;
+  --primary_color: #ffffff;
+  --secondary_text: #b1b3be;
+  --secondary_color: #b1b3be;
+  --primary_background: #1a1d27;
+  --secondary_background: #222633;
+  --tertiary_background: #212939;
+  --primary_border: #6405ff;
+  --secondary_border: #54586c;
+  --contrast_background: white;
+  --contrast-text: #1a1d27;
+  /* --PRIMARY_BACKGROUND: "#1a1d27";
+  --SECONDARY_BACKGROUND: "#222633";
+  --TERTIARY_BACKGROUND: "#212939";
+  --PRIMARY_BORDER: "#6405ff";
+  --SECONDARY_BORDER: "#54586c";
+  --PRIMARY_COLOR: "#ffffff";
+  --SECONDARY_COLOR: "#b1b3be";
+  --TERTIARY_COLOR: "#54586c"; */
+}
+body {
+  margin: 0;
+  font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--primary_text);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+pre {
+  background-color: var(--tertiary_background);
+  border-color: var(--secondary_border);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  color: var(--primary_text);
+  white-space: pre-wrap;
+  padding: 0 2px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass Semibold", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=main.ac84c87a.chunk.css.map*/
