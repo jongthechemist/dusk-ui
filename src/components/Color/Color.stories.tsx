@@ -46,9 +46,9 @@ const ColorPaletteItem = (props: {
       <br />
     </p>
     <p>JS:</p>
-    <pre>{`ColorPalette.${props.name}`}</pre>
+    <code>{`ColorPalette.${props.name}`}</code>
     <p>CSS:</p>
-    <pre>{`var(--${props.name.toLowerCase()})`}</pre>
+    <code>{`var(--${props.name.toLowerCase()})`}</code>
   </div>
 );
 

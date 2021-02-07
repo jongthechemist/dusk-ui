@@ -17,7 +17,9 @@ code {
     monospace;
 }
 
-pre {
+pre, code {
+  display: inline;
+  font-size: smaller;
   background-color: var(--tertiary_background);
   border-color: var(--secondary_border);
   border-width: 1px;
