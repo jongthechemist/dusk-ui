@@ -24,7 +24,7 @@ export default {
 const Template: Story<IconProps> = (args) => (
   <article>
     <header>
-      <h1>Icons</h1>
+      <h3>Icons</h3>
     </header>
     <section style={{ display: "flex", marginBottom: 20 }}>
       <Icon {...args} style={{ marginRight: 20 }}>

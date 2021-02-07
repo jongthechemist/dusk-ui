@@ -90,10 +90,10 @@ const PALETTE_DETAILS: {
   },
 ];
 
-export const Template = () => (
+export const Palette = () => (
   <article>
     <header>
-      <h1>Color palette</h1>
+      <h3>Color palette</h3>
     </header>
     <section style={{ display: "flex", flexWrap: "wrap" }}>
       {PALETTE_DETAILS.map(({ color, description }) => (

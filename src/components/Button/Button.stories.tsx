@@ -10,7 +10,12 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = (args) => <Button {...args} />;
+const Template: Story<ButtonProps> = (args) => (
+  <article>
+    <h3>Button</h3>
+    <Button {...args} />
+  </article>
+);
 
 export const Primary = Template.bind({});
 Primary.args = {
