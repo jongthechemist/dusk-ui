@@ -27,8 +27,30 @@ export const Icon: React.FC<IconProps> = styled.span.attrs((props) => ({
           transition: background-position ease-in-out 200ms;
           box-shadow: -10px 10px 15px -3px rgba(100, 5, 255, 0.1), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
           transition: box-shadow ease-in-out 200ms;
+          position: relative;
+          &:before {
+            content: '';
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            transition: box-shadow ease-in-out 200ms;
+            z-index: 0;
+          }
+          > * {
+            z-index: 1;
+          }
           &:hover {
-            box-shadow: -10px 15px 25px -3px rgba(100, 5, 255, 0.1), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: -10px 15px 25px -3px rgba(100, 5, 255, 0.1), 0 6px 3px 0px rgba(0, 0, 0, 0.5);
+            &:before {
+              ${
+                props.size === "small"
+                  ? `box-shadow: 0 5px 10px 10px rgba(0,0,0,0.3);`
+                  : props.size === "medium"
+                  ? `box-shadow: 0 15px 20px 20px rgba(0,0,0,0.3);`
+                  : `box-shadow: 0 20px 30px 30px rgba(0,0,0,0.3);`
+              }}
+            }
           }
         `;
       case "secondary":
@@ -38,7 +60,7 @@ export const Icon: React.FC<IconProps> = styled.span.attrs((props) => ({
           box-shadow: 0 10px 15px -3px rgba(100, 5, 255, 0.2), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
           transition: box-shadow ease-in-out 200ms;
           &:hover {
-            box-shadow: 0 15px 25px -3px rgba(100, 5, 255, 0.2), 0 3px 3px 0px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 15px 25px -3px rgba(100, 5, 255, 0.2), 0 6px 3px 0px rgba(0, 0, 0, 0.5);
           }
         `;
       case "outline":
