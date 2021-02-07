@@ -1,0 +1,12 @@
+export const ColorPalette = {
+  PRIMARY_ACCENT: "#6405ff",
+  PRIMARY_GRADIENT: "linear-gradient(to right, #6405ff, #eb736c)",
+  PRIMARY_BACKGROUND: "#1a1d27",
+  SECONDARY_BACKGROUND: "#222633",
+  TERTIARY_BACKGROUND: "#212939",
+  PRIMARY_BORDER: "#6405ff",
+  SECONDARY_BORDER: "#54586c",
+  PRIMARY_COLOR: "#ffffff",
+  SECONDARY_COLOR: "#b1b3be",
+  TERTIARY_COLOR: "#696c7c",
+};

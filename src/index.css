@@ -1,13 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600&display=swap");
+@import "./components/Color/color.css";
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Overpass", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--primary_text);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+pre {
+  background-color: var(--tertiary_background);
+  border-color: var(--secondary_border);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 2px;
+  color: var(--primary_text);
+  white-space: pre-wrap;
+  padding: 0 2px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass Semibold", Arial, Helvetica, sans-serif;
+  font-weight: 600;
 }
