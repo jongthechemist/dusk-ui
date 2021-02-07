@@ -31,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Overpass Semibold", Arial, Helvetica, sans-serif;
+  font-family: "Overpass", Arial, Helvetica, sans-serif;
   font-weight: 600;
   -webkit-margin-before: 0.5em;
           margin-block-start: 0.5em;
@@ -86,9 +86,5 @@ pre {
   word-wrap: break-word;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Overpass Semibold", Arial, Helvetica, sans-serif;
-  font-weight: 600;
-}
 
-/*# sourceMappingURL=main.ce1413f7.chunk.css.map*/
+/*# sourceMappingURL=main.97984e70.chunk.css.map*/
