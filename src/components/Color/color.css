@@ -3,6 +3,9 @@
   --secondary_accent: #eb736c;
   --primary_gradient: linear-gradient(to right, #6405ff, #eb736c);
   --primary_text: #ffffff;
+  --primary_color: #ffffff;
+  --secondary_text: #b1b3be;
+  --secondary_color: #b1b3be;
   --primary_background: #1a1d27;
   --secondary_background: #222633;
   --tertiary_background: #212939;
