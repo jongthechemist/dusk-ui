@@ -14,7 +14,7 @@ import {
   BsHouseDoor,
 } from "react-icons/bs";
 
-import { Icon, IconProps } from "./Icon";
+import { Icon, IconProps, SimpleIcon, SimpleIconProps } from "./Icon";
 
 export default {
   title: "Components/Icon",
@@ -61,3 +61,39 @@ export const Primary = Template.bind({});
 Primary.args = {
   type: "primary",
 };
+
+export const Simple: Story<SimpleIconProps> = (args) => (
+  <article>
+    <header>
+      <h3>Simple Icons</h3>
+    </header>
+    <section style={{ display: "flex", marginBottom: 20 }}>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <AiOutlineMessage />
+      </SimpleIcon>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <AiOutlinePhone />
+      </SimpleIcon>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <AiOutlineTeam />
+      </SimpleIcon>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <AiOutlineMobile />
+      </SimpleIcon>
+    </section>
+    <section style={{ display: "flex" }}>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <BsController />
+      </SimpleIcon>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <BsCompass />
+      </SimpleIcon>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <BsAppIndicator />
+      </SimpleIcon>
+      <SimpleIcon {...args} style={{ marginRight: 20 }}>
+        <BsHouseDoor />
+      </SimpleIcon>
+    </section>
+  </article>
+);

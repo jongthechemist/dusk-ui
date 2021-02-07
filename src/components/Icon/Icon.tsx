@@ -126,3 +126,75 @@ Icon.defaultProps = {
   type: "plain",
   size: "medium",
 };
+
+export type SimpleIconProps = React.ComponentProps<"span"> & {
+  /**
+   * Type of button
+   */
+  type?: "primary" | "secondary" | "outline" | "plain";
+  /**
+   * How large should the button be?
+   */
+  size?: "small" | "medium" | "large";
+};
+
+export const SimpleIcon: React.FC<SimpleIconProps> = styled.span.attrs(
+  (props: SimpleIconProps) => ({
+    className: [
+      "dusk-ui-simple-icon",
+      `dusk-ui-simple-icon--${props.size}`,
+      `dusk-ui-simple-icon--${props.type}`,
+      `${props.className || ""}`,
+    ].join(" "),
+    children: (
+      <>
+        <svg className="svg-def" width="660" height="220">
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="var(--primary_accent)" />
+              <stop offset="100%" stop-color="var(--secondary_accent)" />
+            </linearGradient>
+          </defs>
+        </svg>
+        {props.children}
+      </>
+    ),
+  })
+)`
+  background: none;
+  > .svg-def {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  &.dusk-ui-simple-icon {
+    &--small {
+      font-size: 1rem;
+    }
+    &--medium {
+      font-size: 2.5rem;
+    }
+    &--large {
+      font-size: 4rem;
+    }
+    &--primary {
+      > :not(.svg-def) path {
+        fill: url(#gradient);
+      }
+    }
+    &--secondary path {
+      fill: var(--primary_border);
+    }
+    &--outline path {
+      fill: var(--secondary_border);
+    }
+    &--plain path {
+      fill: var(--primary_text);
+    }
+  }
+`;
+
+SimpleIcon.defaultProps = {
+  type: "primary",
+  size: "medium",
+};
