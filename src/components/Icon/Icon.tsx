@@ -144,15 +144,15 @@ export const SimpleIcon: React.FC<SimpleIconProps> = styled.span.attrs(
       "dusk-ui-simple-icon",
       `dusk-ui-simple-icon--${props.size}`,
       `dusk-ui-simple-icon--${props.type}`,
-      `${props.className || ""}`,
+      props.className || "",
     ].join(" "),
     children: (
       <>
         <svg className="svg-def" width="660" height="220">
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="var(--primary_accent)" />
-              <stop offset="100%" stop-color="var(--secondary_accent)" />
+              <stop offset="0%" stopColor="var(--primary_accent)" />
+              <stop offset="100%" stopColor="var(--secondary_accent)" />
             </linearGradient>
           </defs>
         </svg>
