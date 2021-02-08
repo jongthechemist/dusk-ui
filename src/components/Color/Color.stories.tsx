@@ -16,7 +16,7 @@ const ColorPaletteItem = (props: {
     style={{
       width: 200,
       paddingRight: 40,
-      paddingBottom: 40,
+      paddingBottom: 80,
     }}
   >
     <div
@@ -45,10 +45,9 @@ const ColorPaletteItem = (props: {
       {props.label}
       <br />
     </p>
-    <p>JS:</p>
-    <code>{`ColorPalette.${props.name}`}</code>
-    <p>CSS:</p>
-    <code>{`var(--${props.name.toLowerCase()})`}</code>
+    JS: <code>{`ColorPalette.${props.name}`}</code>
+    <br/>
+    CSS: <code>{`var(--${props.name.toLowerCase()})`}</code>
   </div>
 );
 
