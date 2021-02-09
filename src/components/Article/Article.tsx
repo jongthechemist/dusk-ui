@@ -22,6 +22,7 @@ export const Article: React.FC<ArticleProps> = styled.article.attrs(
     ),
   })
 )<ArticleProps>`
+  padding-bottom: 3rem;
   header {
     padding-bottom: 0.5rem;
   }

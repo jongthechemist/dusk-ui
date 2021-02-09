@@ -20,7 +20,7 @@ export default {
 export const Shadow: Story<CardProps> = (args: CardProps) => (
   <main>
     <header>
-      <h3>Plain Card</h3>
+      <h3>Shadow Card</h3>
     </header>
     <Card type={args.type} style={{ maxWidth: 400 }}>
       <p>
@@ -42,7 +42,7 @@ Shadow.args = {
 export const Border: Story<CardProps> = (args: CardProps) => (
   <main>
     <header>
-      <h3>Plain Card</h3>
+      <h3>Border Card</h3>
     </header>
     <Card type={args.type} style={{ maxWidth: 400 }}>
       <Article
