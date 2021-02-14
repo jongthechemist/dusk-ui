@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export type LinkProps = React.ComponentPropsWithRef<"a"> & {
-  type: "primary" | "secondary";
+  type?: "primary" | "secondary";
 };
 
 export const Link: React.FC<LinkProps> = styled.a.attrs((props: LinkProps) => ({

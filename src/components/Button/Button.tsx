@@ -42,11 +42,12 @@ export const Button: React.FC<ButtonProps> = styled.button.attrs(
       box-shadow: 10px 10px 15px -3px rgba(235, 115, 108, 0.1),
         -10px 10px 15px -3px rgba(100, 5, 255, 0.1),
         0 3px 3px 0px rgba(0, 0, 0, 0.5);
-      transition: box-shadow ease-in-out 200ms;
+      transition: box-shadow ease-in-out 200ms, transform ease-in-out 100ms;
       &:hover {
         box-shadow: 10px 15px 25px -3px rgba(235, 115, 108, 0.1),
           -10px 15px 25px -3px rgba(100, 5, 255, 0.1),
           0 3px 3px 0px rgba(0, 0, 0, 0.5);
+        transform: translateY(-2px);
       }
     }
     &--secondary {
@@ -54,10 +55,11 @@ export const Button: React.FC<ButtonProps> = styled.button.attrs(
       color: var(--primary_text);
       box-shadow: 0 10px 15px -3px rgba(100, 5, 255, 0.2),
         0 3px 3px 0px rgba(0, 0, 0, 0.5);
-      transition: box-shadow ease-in-out 200ms;
+      transition: box-shadow ease-in-out 200ms, transform ease-in-out 100ms;
       &:hover {
         box-shadow: 0 15px 25px -3px rgba(100, 5, 255, 0.2),
           0 3px 3px 0px rgba(0, 0, 0, 0.5);
+        transform: translateY(-2px);
       }
     }
     &--outline {
